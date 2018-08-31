@@ -4,8 +4,8 @@ public class strings
 		static Scanner userInput = new Scanner(System.in);
 		public static void main(String[] args)
 			{
-				//quiteDown();
-				//printVerticalLetters();
+				quiteDown();
+				printVerticalLetters();
 				findVowels();
 			}
 		public static void quiteDown() 
@@ -13,7 +13,7 @@ public class strings
 				System.out.println("Yell something into the computer");
 				String yelling = userInput.nextLine();
 				System.out.print(yelling.substring(0,1));
-				System.out.print(yelling.substring(1, yelling.length()).toLowerCase());
+				System.out.println(yelling.substring(1, yelling.length()).toLowerCase());
 			}
 		public static void printVerticalLetters()
 			{
@@ -49,6 +49,13 @@ public class strings
 										}
 							}
 					}
-				System.out.print("there are " +sumOfVowels + " vowels");
+				if (sumOfVowels > 1 || sumOfVowels == 0 )
+					{
+						System.out.print("There are " +sumOfVowels + " vowels");
+					}
+				else 
+					{
+						System.out.print("There is " +sumOfVowels + " vowel");
+					}
 			}
 	}
