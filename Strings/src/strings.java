@@ -6,6 +6,7 @@ public class strings
 			{
 				//quiteDown();
 				//printVerticalLetters();
+				findVowels();
 			}
 		public static void quiteDown() 
 			{
@@ -26,6 +27,28 @@ public class strings
 		public static void findVowels()
 			{
 				System.out.println("Type a word to find the number of vowels");
-				
+				String word = userInput.nextLine();
+				int sumOfVowels = 0;
+				for (int i = 0; i < word.length(); i++) 
+					{
+						switch (word.substring(i , i+1))
+							{
+								case "a":
+								case "A":
+								case "e":
+								case "E":
+								case "i":
+								case "I":
+								case "o":
+								case "O":
+								case "u":
+								case "U":
+										{
+											sumOfVowels ++;
+											break;
+										}
+							}
+					}
+				System.out.print("there are " +sumOfVowels + " vowels");
 			}
 	}
